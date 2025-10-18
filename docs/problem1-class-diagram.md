@@ -3,19 +3,21 @@ classDiagram
         class PaypalAPI {
             -double amount
             -string currency
+            +void setAmount(double amount)
+            +void setCurrency(string currency)
             +boolean charge()
         }
         class StripeAPI {
             -string id
             -double amount
             -string currency
-            +bool processPayment()
+            +string processPayment()
         }
         class MercadoPagoAPI {
             -double amount
             -string currency
             -string id
-            +pay()
+            +boolean pay()
         }
         class PaymentProcessor {
             <<interface>>
