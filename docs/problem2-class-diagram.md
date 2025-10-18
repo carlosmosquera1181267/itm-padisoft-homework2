@@ -17,9 +17,11 @@ classDiagram
     }
     class EncriptedNotification {
         +void send(string message)
+        -string encrypt(string message)
     }
     class CompressedNotification {
         +void send(string message)
+        -string compress(string message)
     }
     class LoggedNotification {
         +void send(string message)
@@ -29,6 +31,7 @@ classDiagram
     }
     class TranslatedNotification {
         +void send(string message)
+        -string translate(string message)
     }
     NotificationDecorator ..> Notification
     NotificationDecorator <|-- EncriptedNotification
